@@ -3,7 +3,7 @@ import BookClubHeader from "@/components/BookClubHeader";
 import BookClubIntro from "@/components/BookClubIntro";
 import BookClubCard from "@/components/BookClubCard";
 import BottomNavigation from "@/components/BottomNavigation";
-import bookCover1 from "@assets/generated_images/Book_cover_1_7da080ed.png";
+import bookCover1 from "@assets/generated_images/Botanical_book_cover_design_642d139d.png";
 import bookCover2 from "@assets/generated_images/Abstract_book_cover_design_8e9e989f.png";
 import avatar1 from "@assets/generated_images/Young_male_celebrity_afaab8b7.png";
 import avatar2 from "@assets/generated_images/Stylish_female_celebrity_4e98ee34.png";

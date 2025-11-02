@@ -2,7 +2,7 @@ import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import BottomNavigation from "@/components/BottomNavigation";
-import bookCoverUrl from "@assets/generated_images/Book_cover_1_7da080ed.png";
+import bookCoverUrl from "@assets/generated_images/Botanical_book_cover_design_642d139d.png";
 import portrait1Url from "@assets/generated_images/Black_white_reader_portrait_72803c45.png";
 import portrait2Url from "@assets/generated_images/Black_white_writer_portrait_aaa217cc.png";
 
