@@ -12,11 +12,11 @@ export default function BookClubDetail() {
       <main className="flex-1 overflow-y-auto pb-4">
         <div className="px-4 pt-4 pb-2 flex items-center gap-3">
           <Avatar className="h-20 w-20 border-2 border-border">
-            <AvatarImage src={hostAvatarUrl} alt="아이유" />
-            <AvatarFallback>아이유</AvatarFallback>
+            <AvatarImage src={hostAvatarUrl} alt="김지성" />
+            <AvatarFallback>김지성</AvatarFallback>
           </Avatar>
           <h1 className="text-xl font-bold" data-testid="text-club-title">
-            아이유의 북클럽
+            김지성의 북클럽
           </h1>
         </div>
 
@@ -76,7 +76,7 @@ export default function BookClubDetail() {
           </Button>
           <Button 
             className="flex-1"
-            variant="default"
+            variant="outline"
             data-testid="button-payment"
           >
             결제하기
