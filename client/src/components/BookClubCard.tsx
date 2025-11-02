@@ -12,11 +12,11 @@ interface BookClubCardProps {
   text2?: string;
   text3?: string;
   text1Bold?: boolean;
-  text2Italic?: boolean;
-  text3Italic?: boolean;
+  text2Gungsuh?: boolean;
+  text3Gungsuh?: boolean;
 }
 
-export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor, onMoreClick, text1 = "인사말", text2 = "이용안내", text3 = "커리큘럼", text1Bold = false, text2Italic = false, text3Italic = false }: BookClubCardProps) {
+export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor, onMoreClick, text1 = "인사말", text2 = "이용안내", text3 = "커리큘럼", text1Bold = false, text2Gungsuh = false, text3Gungsuh = false }: BookClubCardProps) {
   const [, setLocation] = useLocation();
 
   const handleMoreClick = () => {
@@ -61,8 +61,8 @@ export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor,
         <div className="flex-1 flex flex-col justify-between items-center py-1 sm:py-2 min-w-0">
           <div className="space-y-0.5 sm:space-y-1 w-full flex-1 flex flex-col justify-center">
             <p className={`text-xs sm:text-sm font-semibold text-center truncate ${text1Bold ? 'font-bold' : ''}`} data-testid="text-club-info-1">{text1}</p>
-            <p className={`text-xs sm:text-sm font-semibold text-center truncate ${text2Italic ? 'italic' : ''}`} data-testid="text-club-info-2">{text2}</p>
-            <p className={`text-xs sm:text-sm font-semibold text-center truncate ${text3Italic ? 'italic' : ''}`} data-testid="text-club-info-3">{text3}</p>
+            <p className="text-xs sm:text-sm font-semibold text-center truncate" style={text2Gungsuh ? { fontFamily: 'Gungsuh, Gungseo, serif' } : {}} data-testid="text-club-info-2">{text2}</p>
+            <p className="text-xs sm:text-sm font-semibold text-center truncate" style={text3Gungsuh ? { fontFamily: 'Gungsuh, Gungseo, serif' } : {}} data-testid="text-club-info-3">{text3}</p>
           </div>
           <Button 
             variant="secondary"

@@ -35,8 +35,8 @@ export default function SearchResult1() {
             text2='"안녕하세요.'
             text3='김지성 입니다..."'
             text1Bold={true}
-            text2Italic={true}
-            text3Italic={true}
+            text2Gungsuh={true}
+            text3Gungsuh={true}
           />
         </div>
       </main>
