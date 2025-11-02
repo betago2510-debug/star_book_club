@@ -5,7 +5,7 @@ export default function BookClubIntro() {
   const [, setLocation] = useLocation();
 
   return (
-    <div className="bg-muted rounded-lg p-6 flex items-end justify-between w-full h-full">
+    <div className="bg-muted rounded-3xl p-6 flex items-end justify-between w-full h-full">
       <h2 className="text-2xl font-bold" data-testid="text-intro-title">
         북클럽 소개
       </h2>
