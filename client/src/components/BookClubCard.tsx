@@ -43,11 +43,11 @@ export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor,
           }}
         />
         
-        <div className="w-24 flex-shrink-0">
+        <div className="w-24 flex-shrink-0 h-full flex items-center">
           <img 
             src={bookCover} 
             alt="Book cover"
-            className="w-full h-auto rounded-md shadow-md"
+            className="w-full h-auto max-h-full rounded-md shadow-md object-contain"
             data-testid="img-book-cover"
           />
         </div>
