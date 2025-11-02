@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Landing from "@/pages/landing";
 import Home from "@/pages/home";
+import BookClub from "@/pages/bookclub";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +13,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Landing} />
       <Route path="/home" component={Home} />
+      <Route path="/bookclub" component={BookClub} />
       <Route component={NotFound} />
     </Switch>
   );
