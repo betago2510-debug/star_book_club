@@ -30,17 +30,24 @@ export default function BookClub() {
     <div className="flex flex-col h-screen bg-background">
       <BookClubHeader />
       
-      <main className="flex-1 overflow-y-auto p-4 space-y-4">
-        <BookClubIntro />
+      <main className="flex-1 overflow-y-auto">
+        <div className="p-4 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
+          <BookClubIntro />
+        </div>
         
         {clubs.map((club) => (
-          <BookClubCard 
+          <div 
             key={club.id}
-            bookCover={club.bookCover}
-            hostAvatar={club.hostAvatar}
-            hostName={club.hostName}
-            bgColor={club.bgColor}
-          />
+            className="p-4 flex items-center justify-center" 
+            style={{ height: 'calc((100vh - 120px) / 3)' }}
+          >
+            <BookClubCard 
+              bookCover={club.bookCover}
+              hostAvatar={club.hostAvatar}
+              hostName={club.hostName}
+              bgColor={club.bgColor}
+            />
+          </div>
         ))}
       </main>
 

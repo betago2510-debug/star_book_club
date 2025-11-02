@@ -11,7 +11,7 @@ interface BookClubCardProps {
 export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor }: BookClubCardProps) {
   return (
     <div 
-      className="rounded-lg p-4 flex gap-4 relative"
+      className="rounded-lg p-4 flex gap-4 relative w-full h-full"
       style={{ backgroundColor: bgColor }}
       data-testid="container-bookclub-card"
     >
