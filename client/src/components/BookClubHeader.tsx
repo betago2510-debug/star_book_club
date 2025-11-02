@@ -19,7 +19,7 @@ export default function BookClubHeader() {
     e.preventDefault();
     if (searchQuery.trim()) {
       if (searchQuery.trim() === '김지성') {
-        setLocation("/bookclub/detail");
+        setLocation("/search-result-1");
       } else {
         setLocation("/search-result");
       }

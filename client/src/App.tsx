@@ -12,6 +12,7 @@ import TodaySentence from "@/pages/today-sentence";
 import MyPage from "@/pages/mypage";
 import Empty from "@/pages/empty";
 import SearchResult from "@/pages/search-result";
+import SearchResult1 from "@/pages/search-result-1";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/profile" component={MyPage} />
       <Route path="/empty" component={Empty} />
       <Route path="/search-result" component={SearchResult} />
+      <Route path="/search-result-1" component={SearchResult1} />
       <Route component={NotFound} />
     </Switch>
   );
