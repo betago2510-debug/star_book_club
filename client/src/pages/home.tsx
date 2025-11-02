@@ -23,13 +23,13 @@ export default function Home() {
       <Header />
       
       <main className="flex-1 overflow-y-auto">
-        <div className="p-4 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
+        <div className="px-4 py-2 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
           <HeroBanner image={bannerImage} title="북클럽 소개 (이미지)" />
         </div>
-        <div className="p-4 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
+        <div className="px-4 py-2 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
           <QuoteSection text="오늘의 문장 (이미지)" />
         </div>
-        <div className="p-4 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
+        <div className="px-4 py-2 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
           <ClubAvatars clubs={clubs} title="" />
         </div>
       </main>
