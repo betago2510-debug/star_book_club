@@ -9,7 +9,7 @@ export default function BookClubDetail() {
     <div className="flex flex-col h-screen bg-[#87CEEB]">
       <Header />
       
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto pb-4">
         <div className="px-4 pt-4 pb-2 flex items-center gap-3">
           <Avatar className="h-20 w-20 border-2 border-border">
             <AvatarImage src={hostAvatarUrl} alt="아이유" />
@@ -22,7 +22,7 @@ export default function BookClubDetail() {
 
         <div 
           className="p-4 flex items-center justify-center" 
-          style={{ height: 'calc((100vh - 180px) / 3)' }}
+          style={{ height: '200px' }}
         >
           <div className="bg-[#DDA0DD] rounded-3xl w-full h-full flex items-center justify-center">
             <h2 className="text-3xl font-bold text-white" data-testid="text-greeting">
@@ -33,7 +33,7 @@ export default function BookClubDetail() {
 
         <div 
           className="px-4 flex items-center justify-center" 
-          style={{ height: 'calc((100vh - 180px) / 3)' }}
+          style={{ height: '200px' }}
         >
           <div className="bg-[#F4A460] rounded-3xl w-full h-full flex items-center justify-center">
             <h2 className="text-3xl font-bold text-white" data-testid="text-guide">
@@ -44,7 +44,7 @@ export default function BookClubDetail() {
 
         <div 
           className="px-4 pb-2 flex items-center justify-center" 
-          style={{ height: 'calc((100vh - 180px) / 3)' }}
+          style={{ height: '200px' }}
         >
           <div className="bg-[#90EE90] rounded-3xl w-full h-full flex flex-col items-center justify-center gap-6">
             <h2 className="text-3xl font-bold" data-testid="text-curriculum">
@@ -59,7 +59,7 @@ export default function BookClubDetail() {
           </div>
         </div>
 
-        <div className="px-4 pb-4 flex gap-2">
+        <div className="px-4 pt-4 flex gap-2">
           <Button 
             className="flex-1 bg-[#FF8C00] hover:bg-[#E67E00] text-white"
             data-testid="button-comment"
