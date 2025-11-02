@@ -31,6 +31,9 @@ export default function SearchResult1() {
             hostName={club.hostName}
             bgColor={club.bgColor}
             onMoreClick={() => setLocation("/bookclub/detail")}
+            text1="김지성의 북클럽"
+            text2="안녕하세요."
+            text3="김지성 입니다..."
           />
         </div>
       </main>
