@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 import heroImage from "@assets/generated_images/Cozy_cafe_reading_atmosphere_1d9f7e31.png";
 
 export default function Landing() {
+  const [, setLocation] = useLocation();
+
   const handleLogin = () => {
-    console.log("Login triggered");
+    setLocation("/home");
   };
 
   const handleBrowse = () => {
