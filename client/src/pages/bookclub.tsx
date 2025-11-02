@@ -1,3 +1,4 @@
+import { useLocation } from "wouter";
 import BookClubHeader from "@/components/BookClubHeader";
 import BookClubIntro from "@/components/BookClubIntro";
 import BookClubCard from "@/components/BookClubCard";
@@ -8,6 +9,7 @@ import avatar1 from "@assets/generated_images/Young_male_celebrity_afaab8b7.png"
 import avatar2 from "@assets/generated_images/Stylish_female_celebrity_4e98ee34.png";
 
 export default function BookClub() {
+  const [, setLocation] = useLocation();
   // TODO: remove mock functionality
   const clubs = [
     {
@@ -46,7 +48,7 @@ export default function BookClub() {
               hostAvatar={club.hostAvatar}
               hostName={club.hostName}
               bgColor={club.bgColor}
-              onMoreClick={index === 0 ? () => console.log("First club - will navigate to detail page") : undefined}
+              onMoreClick={index === 0 ? () => setLocation("/bookclub/detail") : undefined}
             />
           </div>
         ))}
