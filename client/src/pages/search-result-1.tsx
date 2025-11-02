@@ -34,6 +34,9 @@ export default function SearchResult1() {
             text1="김지성의 북클럽"
             text2='"안녕하세요.'
             text3='김지성 입니다..."'
+            text1Bold={true}
+            text2Italic={true}
+            text3Italic={true}
           />
         </div>
       </main>
