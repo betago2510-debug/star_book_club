@@ -52,7 +52,7 @@ export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor,
           />
         </div>
         
-        <div className="flex-1 flex flex-col justify-between items-center py-1 sm:py-2 min-w-0">
+        <div className="flex-1 flex flex-col justify-center items-center gap-2 sm:gap-3 py-1 sm:py-2 min-w-0">
           <div className="space-y-0.5 sm:space-y-1 w-full">
             <p className="text-xs sm:text-sm font-semibold text-center truncate" data-testid="text-club-info-1">인사말</p>
             <p className="text-xs sm:text-sm font-semibold text-center truncate" data-testid="text-club-info-2">이용안내</p>
@@ -63,7 +63,7 @@ export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor,
             size="sm"
             onClick={handleMoreClick}
             data-testid="button-card-more"
-            className="text-xs sm:text-sm mt-1"
+            className="text-xs sm:text-sm"
           >
             더보기
           </Button>
