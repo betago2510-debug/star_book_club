@@ -23,7 +23,7 @@ export default function ClubAvatars({ clubs, title }: ClubAvatarsProps) {
         </h3>
       )}
       <div className="overflow-x-auto px-4">
-        <div className="flex gap-4 justify-center md:justify-center min-w-max md:min-w-0">
+        <div className="flex gap-4 justify-center md:justify-center min-w-max md:min-w-0 pt-6">
           {clubs.map((club, index) => (
             <div 
               key={club.id}
