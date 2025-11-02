@@ -1,3 +1,4 @@
+import { useLocation } from "wouter";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -5,6 +6,8 @@ import BottomNavigation from "@/components/BottomNavigation";
 import hostAvatarUrl from "@assets/generated_images/Young_male_celebrity_afaab8b7.png";
 
 export default function BookClubDetail() {
+  const [, setLocation] = useLocation();
+
   return (
     <div className="flex flex-col h-screen bg-background">
       <Header />
@@ -52,6 +55,7 @@ export default function BookClubDetail() {
             </h2>
             <Button 
               className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30"
+              onClick={() => setLocation("/empty")}
               data-testid="button-past-clubs"
             >
               +지난 북클럽 보기
@@ -63,6 +67,7 @@ export default function BookClubDetail() {
           <Button 
             className="flex-1"
             variant="secondary"
+            onClick={() => setLocation("/empty")}
             data-testid="button-comment"
           >
             댓글쓰기
@@ -70,6 +75,7 @@ export default function BookClubDetail() {
           <Button 
             className="flex-1"
             variant="default"
+            onClick={() => setLocation("/empty")}
             data-testid="button-share"
           >
             공유하기
