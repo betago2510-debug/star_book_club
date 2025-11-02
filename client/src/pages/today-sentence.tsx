@@ -36,7 +36,7 @@ export default function TodaySentence() {
                 <div className="w-16 h-16 rounded-full bg-card" />
               </div>
               <Button 
-                variant="default"
+                className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30"
                 size="sm"
                 onClick={() => setLocation("/empty")}
                 data-testid="button-share-1"
@@ -64,11 +64,10 @@ export default function TodaySentence() {
                 드러나기라도 할 것처럼
               </p>
               <Button 
-                variant="default"
+                className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30 self-end"
                 size="sm"
                 onClick={() => setLocation("/empty")}
                 data-testid="button-share-2"
-                className="self-end"
               >
                 공유하기
               </Button>
@@ -95,7 +94,7 @@ export default function TodaySentence() {
                 <div className="w-16 h-16 rounded-full bg-card" />
               </div>
               <Button 
-                variant="default"
+                className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30"
                 size="sm"
                 onClick={() => setLocation("/empty")}
                 data-testid="button-share-3"
