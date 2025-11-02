@@ -22,14 +22,14 @@ export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor,
   };
 
   return (
-    <div className="flex items-center gap-4 w-full h-full" data-testid="container-bookclub-card">
-      <Avatar className="h-20 w-20 border-2 border-border flex-shrink-0">
+    <div className="w-full h-full relative" data-testid="container-bookclub-card">
+      <Avatar className="h-20 w-20 border-2 border-border absolute left-0 top-1/2 -translate-y-1/2 z-10">
         <AvatarImage src={hostAvatar} alt={hostName} />
         <AvatarFallback>{hostName[0]}</AvatarFallback>
       </Avatar>
       
       <div 
-        className="rounded-3xl p-6 flex gap-4 flex-1 relative"
+        className="rounded-3xl p-6 flex gap-4 w-full h-full relative ml-12"
         style={{ 
           backgroundColor: bgColor,
         }}
