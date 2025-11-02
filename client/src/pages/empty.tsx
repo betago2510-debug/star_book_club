@@ -16,7 +16,7 @@ export default function Empty() {
       
       <main className="flex-1 flex flex-col items-center justify-center px-4">
         <h1 
-          className="text-2xl font-bold text-center mb-12"
+          className="text-5xl font-bold text-center mb-12"
           data-testid="text-empty-message"
         >
           현재 준비중입니다.
