@@ -14,9 +14,9 @@ export default function HeroBanner({ image, title }: HeroBannerProps) {
         alt={title}
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 flex items-center justify-end px-8">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 flex items-center justify-center px-8">
         <h2 
-          className="text-2xl font-bold text-white"
+          className="text-2xl font-bold text-white text-center"
           data-testid="text-banner-title"
         >
           {title}
