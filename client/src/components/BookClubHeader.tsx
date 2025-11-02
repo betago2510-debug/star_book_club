@@ -1,25 +1,97 @@
-import { Menu, Search } from "lucide-react";
+import { useState } from "react";
+import { Menu, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 export default function BookClubHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [, setLocation] = useLocation();
+
+  const handleMenuClick = (path: string) => {
+    setLocation(path);
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="flex items-center justify-between p-4 bg-primary/10">
-      <Button 
-        size="icon" 
-        variant="ghost"
-        onClick={() => console.log("Menu clicked")}
-        data-testid="button-menu"
-      >
-        <Menu className="h-6 w-6" />
-      </Button>
-      <Button 
-        size="icon" 
-        variant="ghost"
-        onClick={() => console.log("Search clicked")}
-        data-testid="button-search"
-      >
-        <Search className="h-6 w-6" />
-      </Button>
-    </header>
+    <>
+      <header className="flex items-center justify-between p-4 bg-primary/10 relative z-50">
+        <Button 
+          size="icon" 
+          variant="ghost"
+          onClick={() => console.log("Search clicked")}
+          data-testid="button-search"
+        >
+          <Search className="h-6 w-6" />
+        </Button>
+        <Button 
+          size="icon" 
+          variant="ghost"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          data-testid="button-menu"
+        >
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-6 w-6" />}
+        </Button>
+      </header>
+
+      {isMenuOpen && (
+        <>
+          <div 
+            className="fixed inset-0 bg-black/20 z-40"
+            onClick={() => setIsMenuOpen(false)}
+            data-testid="menu-backdrop"
+          />
+          <div className="fixed top-14 right-2 bg-card border border-border rounded-md shadow-lg z-50 py-1 w-[140px]">
+            <Button
+              variant="ghost"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
+              onClick={() => handleMenuClick("/bookclub")}
+              data-testid="menu-item-bookclub"
+            >
+              북클럽
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
+              onClick={() => handleMenuClick("/quote")}
+              data-testid="menu-item-quote"
+            >
+              오늘의 문장
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
+              onClick={() => handleMenuClick("/")}
+              data-testid="menu-item-login"
+            >
+              로그인(아웃)
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
+              onClick={() => handleMenuClick("/profile")}
+              data-testid="menu-item-profile"
+            >
+              마이프로필
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
+              onClick={() => handleMenuClick("/empty")}
+              data-testid="menu-item-faq"
+            >
+              FAQ
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
+              onClick={() => handleMenuClick("/empty")}
+              data-testid="menu-item-contact"
+            >
+              이메일로 문의하기
+            </Button>
+          </div>
+        </>
+      )}
+    </>
   );
 }
