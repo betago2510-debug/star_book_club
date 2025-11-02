@@ -65,7 +65,7 @@ export default function BookClubDetail() {
 
         <div className="px-4 pt-4 pb-4 flex gap-2">
           <Button 
-            className="flex-1"
+            className="flex-1 min-w-0 text-xs sm:text-sm"
             variant="secondary"
             onClick={() => setLocation("/empty")}
             data-testid="button-comment"
@@ -73,7 +73,7 @@ export default function BookClubDetail() {
             댓글쓰기
           </Button>
           <Button 
-            className="flex-1"
+            className="flex-1 min-w-0 text-xs sm:text-sm"
             variant="default"
             onClick={() => setLocation("/empty")}
             data-testid="button-share"
@@ -81,7 +81,7 @@ export default function BookClubDetail() {
             공유하기
           </Button>
           <Button 
-            className="flex-1"
+            className="flex-1 min-w-0 text-xs sm:text-sm"
             variant="outline"
             onClick={() => setLocation("/payment")}
             data-testid="button-payment"
