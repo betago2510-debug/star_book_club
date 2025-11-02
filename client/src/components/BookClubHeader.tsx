@@ -18,7 +18,11 @@ export default function BookClubHeader() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setLocation("/empty");
+      if (searchQuery.trim() === '김지성') {
+        setLocation("/bookclub/detail");
+      } else {
+        setLocation("/empty");
+      }
       setIsSearchOpen(false);
       setSearchQuery("");
     }
