@@ -37,10 +37,10 @@ export default function MyPage() {
                 }}
               />
               
-              <div className="space-y-0.5 sm:space-y-1">
-                <p className="text-xs sm:text-sm font-semibold truncate" data-testid="text-profile-info-1">가입정보</p>
-                <p className="text-xs sm:text-sm font-semibold truncate" data-testid="text-profile-info-2">별명</p>
-                <p className="text-xs sm:text-sm font-semibold truncate" data-testid="text-profile-info-3">결제수단/연동계정</p>
+              <div className="space-y-1 sm:space-y-2">
+                <p className="text-sm sm:text-base md:text-lg font-semibold truncate" data-testid="text-profile-info-1">가입정보</p>
+                <p className="text-sm sm:text-base md:text-lg font-semibold truncate" data-testid="text-profile-info-2">별명</p>
+                <p className="text-sm sm:text-base md:text-lg font-semibold truncate" data-testid="text-profile-info-3">결제수단/연동계정</p>
               </div>
               
               <Button 
@@ -83,8 +83,8 @@ export default function MyPage() {
         </div>
 
         <div className="px-4 py-4 flex items-center justify-center" style={{ height: 'calc((100vh - 180px) / 3)' }}>
-          <div className="rounded-3xl px-3 py-3 sm:px-4 sm:py-4 md:p-6 w-full h-full bg-card border border-border flex items-center overflow-hidden">
-            <h3 className="text-base sm:text-lg font-bold truncate" data-testid="text-payment-history-title">
+          <div className="rounded-3xl px-3 py-3 sm:px-4 sm:py-4 md:p-6 w-full h-full bg-card border border-border flex items-center justify-center overflow-hidden">
+            <h3 className="text-base sm:text-lg font-bold text-center truncate w-full" data-testid="text-payment-history-title">
               결제 내역 / 배송 내역
             </h3>
           </div>
