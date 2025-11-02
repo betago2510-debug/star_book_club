@@ -6,7 +6,7 @@ interface HeroBannerProps {
 export default function HeroBanner({ image, title }: HeroBannerProps) {
   return (
     <div 
-      className="relative w-full h-48 overflow-hidden rounded-lg"
+      className="relative w-full h-full overflow-hidden rounded-lg"
       data-testid="container-hero-banner"
     >
       <img 

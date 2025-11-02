@@ -19,13 +19,17 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-background pb-20">
+    <div className="flex flex-col h-screen bg-background">
       <Header />
       
-      <main className="flex-1 overflow-y-auto">
-        <div className="p-4 space-y-6">
+      <main className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-1 p-4 flex items-center justify-center">
           <HeroBanner image={bannerImage} title="북클럽 소개 (이미지)" />
+        </div>
+        <div className="flex-1 p-4 flex items-center justify-center">
           <QuoteSection text="오늘의 문장 (이미지)" />
+        </div>
+        <div className="flex-1 p-4 flex items-center justify-center">
           <ClubAvatars clubs={clubs} title="등록중 등록중" />
         </div>
       </main>

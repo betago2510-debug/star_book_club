@@ -13,14 +13,14 @@ interface ClubAvatarsProps {
 
 export default function ClubAvatars({ clubs, title }: ClubAvatarsProps) {
   return (
-    <div className="py-6">
+    <div className="w-full h-full flex flex-col justify-center">
       <h3 
         className="text-sm font-semibold text-primary mb-4 px-4"
         data-testid="text-clubs-title"
       >
         {title}
       </h3>
-      <div className="flex gap-4 px-4 overflow-x-auto pb-2">
+      <div className="flex gap-4 px-4 justify-center items-center flex-wrap">
         {clubs.map((club, index) => (
           <div 
             key={club.id}
