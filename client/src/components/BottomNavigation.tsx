@@ -15,7 +15,7 @@ export default function BottomNavigation() {
     { icon: <Home className="h-5 w-5" />, label: "홈", path: "/home" },
     { icon: <BookOpen className="h-5 w-5" />, label: "북클럽", path: "/bookclub" },
     { icon: <Sparkles className="h-5 w-5" />, label: "오늘의 문장", path: "/quote" },
-    { icon: <User className="h-5 w-5" />, label: "마이", path: "/profile" },
+    { icon: <User className="h-5 w-5" />, label: "마이 페이지", path: "/profile" },
   ];
 
   return (
