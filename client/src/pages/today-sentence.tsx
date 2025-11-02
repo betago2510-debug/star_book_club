@@ -2,6 +2,9 @@ import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import BottomNavigation from "@/components/BottomNavigation";
+import bookCoverUrl from "@assets/generated_images/Book_cover_1_7da080ed.png";
+import portrait1Url from "@assets/generated_images/Black_white_reader_portrait_72803c45.png";
+import portrait2Url from "@assets/generated_images/Black_white_writer_portrait_aaa217cc.png";
 
 export default function TodaySentence() {
   const [, setLocation] = useLocation();
@@ -32,8 +35,12 @@ export default function TodaySentence() {
               </p>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <div className="w-20 h-20 rounded-full bg-foreground flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-card" />
+              <div className="w-20 h-20 rounded-full border border-muted-foreground/30 overflow-hidden">
+                <img 
+                  src={portrait1Url} 
+                  alt="Reader portrait" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <Button 
                 className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30"
@@ -53,7 +60,11 @@ export default function TodaySentence() {
         >
           <div className="bg-accent rounded-3xl w-full h-full p-6 flex items-center justify-between gap-4">
             <div className="w-24 flex-shrink-0">
-              <div className="w-full aspect-[3/4] bg-muted rounded-lg" />
+              <img 
+                src={bookCoverUrl} 
+                alt="Book cover" 
+                className="w-full h-auto rounded-lg shadow-md"
+              />
             </div>
             <div className="flex-1 flex flex-col gap-2">
               <p className="text-xs leading-relaxed" data-testid="text-book-intro">
@@ -90,8 +101,12 @@ export default function TodaySentence() {
               </p>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <div className="w-20 h-20 rounded-full bg-foreground flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-card" />
+              <div className="w-20 h-20 rounded-full border border-muted-foreground/30 overflow-hidden">
+                <img 
+                  src={portrait2Url} 
+                  alt="Writer portrait" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <Button 
                 className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30"
