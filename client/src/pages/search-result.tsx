@@ -19,7 +19,7 @@ export default function SearchResult() {
           className="text-[30px] font-bold text-center mb-12"
           data-testid="text-empty-message"
         >
-          해당 검색 결과를 찾을 수 없습니다.
+          해당 검색 결과를<br />찾을 수 없습니다.
         </h1>
         
         <Button
