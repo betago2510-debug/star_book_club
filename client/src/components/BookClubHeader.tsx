@@ -1,15 +1,32 @@
 import { useState } from "react";
 import { Menu, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useLocation } from "wouter";
 
 export default function BookClubHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [, setLocation] = useLocation();
 
   const handleMenuClick = (path: string) => {
     setLocation(path);
     setIsMenuOpen(false);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      setLocation("/empty");
+      setIsSearchOpen(false);
+      setSearchQuery("");
+    }
+  };
+
+  const handleSearchClose = () => {
+    setIsSearchOpen(false);
+    setSearchQuery("");
   };
 
   return (
@@ -18,10 +35,10 @@ export default function BookClubHeader() {
         <Button 
           size="icon" 
           variant="ghost"
-          onClick={() => console.log("Search clicked")}
+          onClick={() => setIsSearchOpen(!isSearchOpen)}
           data-testid="button-search"
         >
-          <Search className="h-6 w-6" />
+          {isSearchOpen ? <X className="h-5 w-5" /> : <Search className="h-6 w-6" />}
         </Button>
         <Button 
           size="icon" 
@@ -32,6 +49,37 @@ export default function BookClubHeader() {
           {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-6 w-6" />}
         </Button>
       </header>
+
+      {isSearchOpen && (
+        <>
+          <div 
+            className="fixed inset-0 bg-black/20 z-40"
+            onClick={handleSearchClose}
+            data-testid="search-backdrop"
+          />
+          <div className="fixed top-14 left-2 right-2 bg-card border border-border rounded-md shadow-lg z-50 p-3 max-w-md mx-auto">
+            <form onSubmit={handleSearch} className="flex gap-2">
+              <Input
+                type="text"
+                placeholder="검색어를 입력하세요"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="flex-1"
+                autoFocus
+                data-testid="input-search"
+              />
+              <Button 
+                type="submit" 
+                size="sm"
+                disabled={!searchQuery.trim()}
+                data-testid="button-search-submit"
+              >
+                검색
+              </Button>
+            </form>
+          </div>
+        </>
+      )}
 
       {isMenuOpen && (
         <>
