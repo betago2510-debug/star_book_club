@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/generated_images/Cozy_cafe_reading_atmosphere_1d9f7e31.png";
+import heroImage from "@assets/log-in (landing)_1762086455288.png";
 
 export default function Landing() {
   const handleLogin = () => {
