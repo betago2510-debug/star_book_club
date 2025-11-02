@@ -35,10 +35,10 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
             data-testid="menu-backdrop"
           />
-          <div className="fixed top-16 right-4 bg-card border border-border rounded-lg shadow-lg z-50 py-2 min-w-[200px]">
+          <div className="fixed top-14 right-2 bg-card border border-border rounded-md shadow-lg z-50 py-1 w-[140px]">
             <Button
               variant="ghost"
-              className="w-full justify-start px-4 py-3 hover-elevate"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
               onClick={() => handleMenuClick("/bookclub")}
               data-testid="menu-item-bookclub"
             >
@@ -46,7 +46,7 @@ export default function Header() {
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start px-4 py-3 hover-elevate"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
               onClick={() => handleMenuClick("/quote")}
               data-testid="menu-item-quote"
             >
@@ -54,7 +54,7 @@ export default function Header() {
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start px-4 py-3 hover-elevate"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
               onClick={() => handleMenuClick("/")}
               data-testid="menu-item-login"
             >
@@ -62,7 +62,7 @@ export default function Header() {
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start px-4 py-3 hover-elevate"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
               onClick={() => handleMenuClick("/profile")}
               data-testid="menu-item-profile"
             >
@@ -70,7 +70,7 @@ export default function Header() {
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start px-4 py-3 hover-elevate"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
               onClick={() => handleMenuClick("/empty")}
               data-testid="menu-item-faq"
             >
@@ -78,7 +78,7 @@ export default function Header() {
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start px-4 py-3 hover-elevate"
+              className="w-full justify-start px-3 py-2 text-sm hover-elevate"
               onClick={() => handleMenuClick("/empty")}
               data-testid="menu-item-contact"
             >
