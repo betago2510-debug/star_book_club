@@ -43,10 +43,10 @@ export default function ClubAvatars({ clubs, title }: ClubAvatarsProps) {
                 </span>
               )}
               <span 
-                className="text-xs text-center border border-border px-2 py-1 rounded-sm bg-card"
+                className="text-xs text-center border border-border px-2 py-1 rounded-sm bg-card leading-tight"
                 data-testid={`text-club-name-${index}`}
               >
-                {club.name}
+                북클럽<br />이름
               </span>
             </div>
           ))}
