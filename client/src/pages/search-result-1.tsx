@@ -23,7 +23,7 @@ export default function SearchResult1() {
       <main className="flex-1 overflow-y-auto pb-6">
         <div 
           className="px-4 py-4 flex items-center justify-center"
-          style={{ height: 'calc(100vh - 180px)' }}
+          style={{ height: 'calc((100vh - 180px) / 3)' }}
         >
           <BookClubCard 
             bookCover={club.bookCover}
