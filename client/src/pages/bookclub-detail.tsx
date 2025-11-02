@@ -83,6 +83,7 @@ export default function BookClubDetail() {
           <Button 
             className="flex-1"
             variant="outline"
+            onClick={() => setLocation("/payment")}
             data-testid="button-payment"
           >
             결제하기
