@@ -9,6 +9,7 @@ import BookClub from "@/pages/bookclub";
 import BookClubDetail from "@/pages/bookclub-detail";
 import Payment from "@/pages/payment";
 import TodaySentence from "@/pages/today-sentence";
+import MyPage from "@/pages/mypage";
 import Empty from "@/pages/empty";
 import NotFound from "@/pages/not-found";
 
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/bookclub/detail" component={BookClubDetail} />
       <Route path="/payment" component={Payment} />
       <Route path="/quote" component={TodaySentence} />
+      <Route path="/profile" component={MyPage} />
       <Route path="/empty" component={Empty} />
       <Route component={NotFound} />
     </Switch>
