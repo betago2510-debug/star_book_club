@@ -30,7 +30,7 @@ export default function Home() {
           <QuoteSection text="오늘의 문장 (이미지)" />
         </div>
         <div className="flex-1 p-4 flex items-center justify-center">
-          <ClubAvatars clubs={clubs} title="등록중 등록중" />
+          <ClubAvatars clubs={clubs} title="" />
         </div>
       </main>
 
