@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 export default function BookClubIntro() {
+  const [, setLocation] = useLocation();
+
   return (
     <div className="bg-muted rounded-lg p-6 flex items-end justify-between w-full h-full">
       <h2 className="text-2xl font-bold" data-testid="text-intro-title">
@@ -8,7 +11,7 @@ export default function BookClubIntro() {
       </h2>
       <Button 
         variant="secondary"
-        onClick={() => console.log("More info clicked")}
+        onClick={() => setLocation("/empty")}
         data-testid="button-intro-more"
       >
         더보기

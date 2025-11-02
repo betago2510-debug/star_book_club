@@ -35,7 +35,7 @@ export default function BookClub() {
           <BookClubIntro />
         </div>
         
-        {clubs.map((club) => (
+        {clubs.map((club, index) => (
           <div 
             key={club.id}
             className="p-4 flex items-center justify-center" 
@@ -46,6 +46,7 @@ export default function BookClub() {
               hostAvatar={club.hostAvatar}
               hostName={club.hostName}
               bgColor={club.bgColor}
+              onMoreClick={index === 0 ? () => console.log("First club - will navigate to detail page") : undefined}
             />
           </div>
         ))}

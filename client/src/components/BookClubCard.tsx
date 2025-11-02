@@ -1,14 +1,26 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 interface BookClubCardProps {
   bookCover: string;
   hostAvatar: string;
   hostName: string;
   bgColor: string;
+  onMoreClick?: () => void;
 }
 
-export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor }: BookClubCardProps) {
+export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor, onMoreClick }: BookClubCardProps) {
+  const [, setLocation] = useLocation();
+
+  const handleMoreClick = () => {
+    if (onMoreClick) {
+      onMoreClick();
+    } else {
+      setLocation("/empty");
+    }
+  };
+
   return (
     <div 
       className="rounded-lg p-4 flex gap-4 relative w-full h-full"
@@ -39,7 +51,7 @@ export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor 
           <Button 
             variant="secondary"
             size="sm"
-            onClick={() => console.log("More clicked")}
+            onClick={handleMoreClick}
             data-testid="button-card-more"
             className="self-end"
           >
