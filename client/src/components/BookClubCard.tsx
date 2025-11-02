@@ -32,7 +32,6 @@ export default function BookClubCard({ bookCover, hostAvatar, hostName, bgColor,
         className="rounded-3xl p-6 flex gap-4 h-full relative ml-24"
         style={{ 
           backgroundColor: bgColor,
-          width: 'calc(100% - 6rem)',
         }}
       >
         <div 
