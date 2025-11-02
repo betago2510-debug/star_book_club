@@ -21,7 +21,7 @@ export default function BookClubDetail() {
         </div>
 
         <div 
-          className="px-4 flex items-center justify-center" 
+          className="px-4 py-2 flex items-center justify-center" 
           style={{ height: '200px' }}
         >
           <div className="bg-muted rounded-3xl w-full h-full flex items-center justify-center">
@@ -32,7 +32,7 @@ export default function BookClubDetail() {
         </div>
 
         <div 
-          className="px-4 flex items-center justify-center" 
+          className="px-4 py-2 flex items-center justify-center" 
           style={{ height: '200px' }}
         >
           <div className="bg-accent rounded-3xl w-full h-full flex items-center justify-center">
@@ -43,7 +43,7 @@ export default function BookClubDetail() {
         </div>
 
         <div 
-          className="px-4 flex items-center justify-center" 
+          className="px-4 py-2 flex items-center justify-center" 
           style={{ height: '200px' }}
         >
           <div className="bg-secondary rounded-3xl w-full h-full flex flex-col items-center justify-center gap-6">
