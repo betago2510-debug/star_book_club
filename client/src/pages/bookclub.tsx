@@ -33,15 +33,14 @@ export default function BookClub() {
       <BookClubHeader />
       
       <main className="flex-1 overflow-y-auto pb-6">
-        <div className="px-4 py-4 flex items-center justify-center" style={{ height: 'calc((100vh - 120px) / 3)' }}>
+        <div className="px-4 py-4 flex items-center justify-center">
           <BookClubIntro />
         </div>
         
         {clubs.map((club, index) => (
           <div 
             key={club.id}
-            className="px-4 py-4 flex items-center justify-center" 
-            style={{ height: 'calc((100vh - 120px) / 3)' }}
+            className="px-4 py-4 flex items-center justify-center"
           >
             <BookClubCard 
               bookCover={club.bookCover}
