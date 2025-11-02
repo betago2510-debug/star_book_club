@@ -51,7 +51,7 @@ export default function BookClubDetail() {
               커리큘럼
             </h2>
             <Button 
-              variant="outline"
+              className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30"
               data-testid="button-past-clubs"
             >
               +지난 북클럽 보기
