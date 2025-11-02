@@ -5,14 +5,16 @@ export default function BookClubIntro() {
   const [, setLocation] = useLocation();
 
   return (
-    <div className="bg-muted rounded-3xl p-6 flex items-end justify-between w-full h-full">
-      <h2 className="text-2xl font-bold" data-testid="text-intro-title">
+    <div className="bg-muted rounded-3xl px-3 py-3 sm:px-4 sm:py-4 md:p-6 flex items-end justify-between gap-2 w-full h-full min-w-0">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-bold truncate" data-testid="text-intro-title">
         북클럽 소개
       </h2>
       <Button 
         variant="secondary"
+        size="sm"
         onClick={() => setLocation("/empty")}
         data-testid="button-intro-more"
+        className="text-xs sm:text-sm flex-shrink-0"
       >
         더보기
       </Button>

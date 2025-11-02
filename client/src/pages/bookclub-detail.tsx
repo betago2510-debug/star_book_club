@@ -13,12 +13,12 @@ export default function BookClubDetail() {
       <Header />
       
       <main className="flex-1 overflow-y-auto pb-6">
-        <div className="px-4 pt-4 pb-2 flex items-center gap-3">
-          <Avatar className="h-20 w-20 border-2 border-border">
+        <div className="px-4 pt-4 pb-2 flex items-center gap-2 sm:gap-3 min-w-0">
+          <Avatar className="h-16 w-16 sm:h-20 sm:w-20 border-2 border-border flex-shrink-0">
             <AvatarImage src={hostAvatarUrl} alt="김지성" />
             <AvatarFallback>김지성</AvatarFallback>
           </Avatar>
-          <h1 className="text-xl font-bold" data-testid="text-club-title">
+          <h1 className="text-lg sm:text-xl font-bold truncate" data-testid="text-club-title">
             김지성의 북클럽
           </h1>
         </div>
@@ -27,8 +27,8 @@ export default function BookClubDetail() {
           className="px-4 py-2 flex items-center justify-center" 
           style={{ height: '200px' }}
         >
-          <div className="bg-muted rounded-3xl w-full h-full flex items-center justify-center">
-            <h2 className="text-3xl font-bold" data-testid="text-greeting">
+          <div className="bg-muted rounded-3xl w-full h-full flex items-center justify-center px-3 py-3 overflow-hidden">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center" data-testid="text-greeting">
               인사말
             </h2>
           </div>
@@ -38,8 +38,8 @@ export default function BookClubDetail() {
           className="px-4 py-2 flex items-center justify-center" 
           style={{ height: '200px' }}
         >
-          <div className="bg-accent rounded-3xl w-full h-full flex items-center justify-center">
-            <h2 className="text-3xl font-bold" data-testid="text-guide">
+          <div className="bg-accent rounded-3xl w-full h-full flex items-center justify-center px-3 py-3 overflow-hidden">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center" data-testid="text-guide">
               이용 안내
             </h2>
           </div>
@@ -49,12 +49,13 @@ export default function BookClubDetail() {
           className="px-4 py-2 flex items-center justify-center" 
           style={{ height: '200px' }}
         >
-          <div className="bg-secondary rounded-3xl w-full h-full flex flex-col items-center justify-center gap-6">
-            <h2 className="text-3xl font-bold" data-testid="text-curriculum">
+          <div className="bg-secondary rounded-3xl w-full h-full flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-6 px-3 py-3 overflow-hidden">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center" data-testid="text-curriculum">
               커리큘럼
             </h2>
             <Button 
-              className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30"
+              size="sm"
+              className="bg-primary/30 hover:bg-primary/40 text-foreground border-primary/30 text-xs sm:text-sm"
               onClick={() => setLocation("/empty")}
               data-testid="button-past-clubs"
             >
