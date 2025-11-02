@@ -12,7 +12,7 @@ export default function BookClubDetail() {
     <div className="flex flex-col h-screen bg-background">
       <Header />
       
-      <main className="flex-1 overflow-y-auto pb-4">
+      <main className="flex-1 overflow-y-auto pb-6">
         <div className="px-4 pt-4 pb-2 flex items-center gap-3">
           <Avatar className="h-20 w-20 border-2 border-border">
             <AvatarImage src={hostAvatarUrl} alt="김지성" />
@@ -63,7 +63,7 @@ export default function BookClubDetail() {
           </div>
         </div>
 
-        <div className="px-4 pt-4 flex gap-2">
+        <div className="px-4 pt-4 pb-4 flex gap-2">
           <Button 
             className="flex-1"
             variant="secondary"
