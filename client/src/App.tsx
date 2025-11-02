@@ -11,6 +11,7 @@ import Payment from "@/pages/payment";
 import TodaySentence from "@/pages/today-sentence";
 import MyPage from "@/pages/mypage";
 import Empty from "@/pages/empty";
+import SearchResult from "@/pages/search-result";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/quote" component={TodaySentence} />
       <Route path="/profile" component={MyPage} />
       <Route path="/empty" component={Empty} />
+      <Route path="/search-result" component={SearchResult} />
       <Route component={NotFound} />
     </Switch>
   );
