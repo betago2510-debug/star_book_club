@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import Header from "@/components/Header";
 import BottomNavigation from "@/components/BottomNavigation";
-import avatar1 from "@assets/generated_images/Young_male_celebrity_afaab8b7.png";
-import avatar2 from "@assets/generated_images/Stylish_female_celebrity_4e98ee34.png";
+import avatar1 from "@assets/generated_images/Female_celebrity_avatar_d03cef9e.png";
+import avatar2 from "@assets/generated_images/Young_male_celebrity_afaab8b7.png";
 
 export default function MyPage() {
   const [, setLocation] = useLocation();
@@ -64,7 +64,7 @@ export default function MyPage() {
             <div className="flex gap-3 sm:gap-4 md:gap-6 items-center overflow-x-auto">
               <div className="flex flex-col items-center gap-2 flex-shrink-0">
                 <Avatar className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 border-2 border-border">
-                  <img src={avatar2} alt="북클럽" />
+                  <img src={avatar1} alt="북클럽" />
                 </Avatar>
                 <span className="text-xs text-center border border-border px-2 py-1 rounded-sm bg-background leading-tight whitespace-nowrap">
                   북클럽 이름
