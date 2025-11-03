@@ -64,7 +64,7 @@ export default function MyPage() {
             <div className="flex gap-3 sm:gap-4 md:gap-6 items-center overflow-x-auto">
               <div className="flex flex-col items-center gap-2 flex-shrink-0">
                 <Avatar className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 border-2 border-border">
-                  <img src={avatar1} alt="북클럽" />
+                  <img src={avatar2} alt="북클럽" />
                 </Avatar>
                 <span className="text-xs text-center border border-border px-2 py-1 rounded-sm bg-background leading-tight whitespace-nowrap">
                   북클럽 이름
