@@ -13,6 +13,7 @@ import MyPage from "@/pages/mypage";
 import Empty from "@/pages/empty";
 import SearchResult from "@/pages/search-result";
 import SearchResult1 from "@/pages/search-result-1";
+import Screenshots from "@/pages/screenshots";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/empty" component={Empty} />
       <Route path="/search-result" component={SearchResult} />
       <Route path="/search-result-1" component={SearchResult1} />
+      <Route path="/screenshots" component={Screenshots} />
       <Route component={NotFound} />
     </Switch>
   );
